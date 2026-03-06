@@ -76,8 +76,8 @@ export function Navbar() {
             height={56}
             className="rounded-xl transition-transform group-hover:scale-105"
           />
-          <span className="text-2xl font-extrabold text-foreground tracking-tight">
-            Hire<span className="text-gradient"> Hunt</span>
+          <span className="text-2xl font-bold text-foreground tracking-tight">
+            Hire<span className="text-primary font-bold"> Hunt</span>
           </span>
         </Link>
 
@@ -92,9 +92,9 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-bold transition-all duration-200",
+                  "flex items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold transition-all duration-200",
                   isActive
-                    ? "bg-primary/15 text-primary"
+                    ? "bg-primary text-primary-foreground shadow-sm"
                     : "text-muted-foreground hover:bg-secondary hover:text-foreground"
                 )}
               >
@@ -110,14 +110,14 @@ export function Navbar() {
 
           {!user && (
             <>
-              <Button variant="ghost" size="sm" asChild className="gap-2 font-bold">
+              <Button variant="ghost" size="sm" asChild className="gap-2 font-semibold">
                 <Link href="/auth/login">
                   <LogIn className="h-4 w-4" />
                   Sign In
                 </Link>
               </Button>
 
-              <Button size="sm" asChild className="gap-2 font-bold">
+              <Button size="sm" asChild className="gap-2 font-semibold shadow-sm">
                 <Link href="/auth/sign-up">
                   <UserPlus className="h-4 w-4" />
                   Sign Up
@@ -128,7 +128,7 @@ export function Navbar() {
 
           {user && (
             <>
-              <Button variant="ghost" size="sm" asChild className="font-bold">
+              <Button variant="ghost" size="sm" asChild className="font-semibold">
                 <Link href="/profile">
                   Profile
                 </Link>
@@ -136,7 +136,7 @@ export function Navbar() {
 
               <Button
                 size="sm"
-                className="bg-red-500 hover:bg-red-600 text-black font-bold"
+                className="bg-destructive hover:bg-destructive/90 text-destructive-foreground font-semibold shadow-sm"
                 onClick={logout}
               >
                 Logout

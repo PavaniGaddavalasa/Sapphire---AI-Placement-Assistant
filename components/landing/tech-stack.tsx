@@ -16,12 +16,12 @@ export function TechStack() {
   return (
     <section className="relative py-24">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute bottom-0 left-1/2 h-[350px] w-[500px] -translate-x-1/2 rounded-full bg-orange-200/20 blur-[100px]" />
+        <div className="absolute bottom-0 left-1/2 h-[350px] w-[500px] -translate-x-1/2 rounded-full bg-primary/5 blur-[100px]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6">
         <AnimatedSection className="mb-16">
-          <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl text-balance">
+          <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl text-balance">
             Powered by <span className="text-gradient">Advanced AI</span>
           </h2>
           <p className="mt-3 text-base text-muted-foreground max-w-2xl text-pretty font-medium">
@@ -39,7 +39,7 @@ export function TechStack() {
                     <Icon className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-extrabold text-foreground">{tech.label}</h3>
+                    <h3 className="font-bold text-foreground">{tech.label}</h3>
                     <p className="mt-1 text-sm text-muted-foreground">{tech.desc}</p>
                   </div>
                 </div>

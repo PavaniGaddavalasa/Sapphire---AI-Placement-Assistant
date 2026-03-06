@@ -64,7 +64,7 @@ export function Features() {
     <section className="relative py-24">
       <div className="mx-auto max-w-7xl px-6">
         <AnimatedSection className="mb-16">
-          <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl text-balance">
+          <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl text-balance">
             Five Powerful <span className="text-gradient">AI Features</span>
           </h2>
           <p className="mt-3 text-base text-muted-foreground max-w-2xl text-pretty font-medium">
@@ -83,16 +83,14 @@ export function Features() {
                   className="group relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:border-primary/30 hover:shadow-md"
                 >
                   <div
-                    className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl ${
-                      isAccent ? "bg-accent/15" : "bg-primary/15"
-                    } transition-all group-hover:scale-110`}
+                    className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary/50 border border-border transition-all group-hover:scale-105 group-hover:bg-secondary`}
                   >
                     <Icon
                       className={`h-6 w-6 ${isAccent ? "text-accent" : "text-primary"}`}
                     />
                   </div>
 
-                  <h3 className="text-base font-extrabold text-foreground">
+                  <h3 className="text-base font-bold text-foreground">
                     {feature.title}
                   </h3>
 
@@ -104,7 +102,7 @@ export function Features() {
                     {feature.tech.map((t) => (
                       <span
                         key={t}
-                        className="rounded-md bg-secondary px-2 py-1 text-xs font-bold text-secondary-foreground"
+                        className="rounded-md border border-border bg-card px-2 py-1 text-xs font-semibold text-muted-foreground"
                       >
                         {t}
                       </span>

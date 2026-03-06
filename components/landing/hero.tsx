@@ -36,28 +36,19 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Soft Pastel Background Blobs */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-[10%] left-[5%] h-[500px] w-[500px] rounded-full bg-sky-200/35 blur-[120px] animate-pulse-glow" />
-        <div className="absolute bottom-[10%] right-[10%] h-[400px] w-[400px] rounded-full bg-orange-200/30 blur-[100px] animate-pulse-glow animation-delay-1000" />
-        <div className="absolute top-[50%] left-[40%] h-[300px] w-[300px] rounded-full bg-blue-100/25 blur-[100px] animate-pulse-glow animation-delay-600" />
-      </div>
-
-      {/* Subtle Floating Dots */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-[20%] left-[15%] h-1.5 w-1.5 rounded-full bg-primary/30 animate-float" />
-        <div className="absolute top-[30%] right-[20%] h-2 w-2 rounded-full bg-accent/25 animate-float animation-delay-200" />
-        <div className="absolute bottom-[30%] left-[25%] h-1.5 w-1.5 rounded-full bg-primary/20 animate-float animation-delay-400" />
-        <div className="absolute top-[60%] right-[15%] h-1 w-1 rounded-full bg-accent/20 animate-float animation-delay-600" />
-      </div>
+      {/* Professional Grid Background */}
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-50" />
+      
+      {/* Clean Gradient Overlay */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/5 via-transparent to-background" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-left">
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-bold text-primary animate-fade-in">
-          <Sparkles className="h-4 w-4" />
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground shadow-sm animate-fade-in">
+          <Sparkles className="h-4 w-4 text-primary" />
           AI-Powered Placement Preparation
         </div>
 
-        <h1 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl lg:text-5xl animate-slide-up text-balance leading-tight">
+        <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl animate-slide-up text-balance leading-tight">
           Your AI Assistant for{" "}
           <span className="text-gradient">Campus Placements</span>
         </h1>
@@ -65,8 +56,8 @@ export function Hero() {
         <div className="mt-5 h-10 flex items-center animate-slide-up animation-delay-200">
           <span className="text-base text-muted-foreground sm:text-lg">
             {"Prepare for "}
-            <span className="text-primary font-extrabold">{displayed}</span>
-            <span className="animate-pulse text-primary">|</span>
+            <span className="text-foreground font-semibold">{displayed}</span>
+            <span className="animate-pulse text-primary ms-1">|</span>
           </span>
         </div>
 
@@ -76,13 +67,13 @@ export function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row animate-slide-up animation-delay-600">
-          <Button asChild size="lg" className="glow-primary rounded-xl px-8 text-base font-bold">
+          <Button asChild size="lg" className="rounded-md px-8 text-base font-semibold shadow-md hover:shadow-lg transition-all">
             <Link href="/resume">
               Get Started
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="rounded-xl px-8 text-base border-border hover:bg-secondary font-bold">
+          <Button asChild variant="outline" size="lg" className="rounded-md px-8 text-base border-border hover:bg-secondary font-semibold transition-all shadow-sm">
             <Link href="/predictor">
               Check Placement Probability
             </Link>
@@ -98,8 +89,8 @@ export function Hero() {
             { value: "24/7", label: "AI Available" },
           ].map((stat) => (
             <div key={stat.label} className="text-left">
-              <div className="text-2xl font-black text-foreground">{stat.value}</div>
-              <div className="mt-1 text-sm font-semibold text-muted-foreground uppercase tracking-wide">{stat.label}</div>
+              <div className="text-2xl font-bold text-foreground">{stat.value}</div>
+              <div className="mt-1 text-sm font-medium text-muted-foreground uppercase tracking-wider">{stat.label}</div>
             </div>
           ))}
         </div>

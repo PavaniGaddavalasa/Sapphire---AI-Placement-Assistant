@@ -14,8 +14,8 @@ export function Footer() {
               height={40}
               className="rounded-xl"
             />
-            <span className="text-lg font-extrabold text-foreground">
-              Hire<span className="text-gradient"> Hunt</span>
+            <span className="text-lg font-bold text-foreground">
+              Hire<span className="text-primary font-bold"> Hunt</span>
             </span>
           </div>
 
@@ -30,7 +30,7 @@ export function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-bold text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.label}
               </Link>
