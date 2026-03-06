@@ -1,2 +1,2 @@
-# Sapphire---AI-Placement-Assistant
+# Sapphire---HireHunt
 Hackathon Project
